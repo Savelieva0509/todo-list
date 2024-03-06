@@ -1,13 +1,18 @@
+import { useDispatch } from 'react-redux'
 import Button from 'components/Button/button'
+import { addTask } from '.././../redux/tasks-slice'
 import css from './task-form.module.css'
 
-const handleSubmit = (event) => {
-  event.preventDefault()
-  const form = event.target
-  form.reset()
-}
-
 const TaskForm = () => {
+  const dispatch = useDispatch()
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const form = event.target
+    dispatch(addTask(form.elements.text.value))
+    form.reset()
+  }
+
   return (
     <form className={css.form} onSubmit={handleSubmit}>
       <input
