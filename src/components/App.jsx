@@ -1,5 +1,5 @@
-import TaskForm from 'components/TaskForm/task-form'
-import Layout from 'components/Layout/layout'
+import TaskForm from './TaskForm/task-form'
+import Layout from './Layout/layout'
 import AppBar from './AppBar/app-bar'
 import TaskList from './TaskList/task-list'
 
