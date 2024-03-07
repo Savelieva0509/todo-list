@@ -21,7 +21,6 @@ const TaskForm = () => {
   const dispatch = useDispatch()
 
   const handleSubmit = (values, formikHelpers) => {
-    console.log(values)
     dispatch(addTask(values.task))
     formikHelpers.resetForm()
   }
