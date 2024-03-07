@@ -1,8 +1,8 @@
-import React from 'react' // eslint-disable-line no-unused-vars
-import ReactDOM from 'react-dom/client' // eslint-disable-line no-unused-vars
-import { Provider } from 'react-redux' // eslint-disable-line no-unused-vars
-import { store } from './redux/store' // eslint-disable-line no-unused-vars
-import App from './components/app' // eslint-disable-line no-unused-vars
+import React from 'react' 
+import ReactDOM from 'react-dom/client' 
+import { Provider } from 'react-redux' 
+import { store } from './redux/store' 
+import App from './app' 
 import './index.css'
 
 ReactDOM.createRoot(document.querySelector('.root-container')).render(
