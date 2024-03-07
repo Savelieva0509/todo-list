@@ -21,8 +21,7 @@
     "start": "react-scripts start --noLint",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -41,9 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@wemake-services/eslint-config-javascript": "^2.1.1",
-    "@wemake-services/stylelint-config-scss": "^4.0.1"
   }
 }

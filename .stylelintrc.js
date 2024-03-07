@@ -1,3 +1,3 @@
-module.exports = {
-  'extends': ['@wemake-services/stylelint-config-scss',],
-};
+// module.exports = {
+//   'extends': ['@wemake-services/stylelint-config-scss',],
+// };
