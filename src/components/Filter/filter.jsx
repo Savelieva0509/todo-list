@@ -10,7 +10,7 @@ const Filter = () => {
   const dispatch = useDispatch()
   const filter = useSelector(getFilter)
 
-  const handleFilterChange = (filter) => dispatch(setFilter(filter))
+  const handleFilterChange = (newFilter) => dispatch(setFilter(newFilter))
 
   return (
     <div className={css.wrapper}>
