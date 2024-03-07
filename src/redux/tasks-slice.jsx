@@ -1,11 +1,11 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit'
 
 const tasksInitialState = [
-  { id: 0, text: 'Do the dishes', completed: true },
-  { id: 1, text: 'Take out the trash', completed: true },
-  { id: 2, text: 'Clean the house', completed: false },
-  { id: 3, text: 'Organize the closet', completed: false },
-  { id: 4, text: 'Cook a delicious meal', completed: false },
+  { 'id': 0, 'text': 'Do the dishes', 'completed': true },
+  { 'id': 1, 'text': 'Take out the trash', 'completed': true },
+  { 'id': 2, 'text': 'Clean the house', 'completed': false },
+  { 'id': 3, 'text': 'Organize the closet', 'completed': false },
+  { 'id': 4, 'text': 'Cook a delicious meal', 'completed': false },
 ]
 
 const tasksSlice = createSlice({

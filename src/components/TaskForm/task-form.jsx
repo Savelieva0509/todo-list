@@ -7,13 +7,13 @@ import { addTask } from '.././../redux/tasks-slice'
 import css from './task-form.module.css'
 
 const initialValues = {
-  task: '',
+  'task': '',
 }
 
 const maxLength = 10
 
 const taskSchema = Yup.object().shape({
-  task: Yup.string()
+  'task': Yup.string()
     .max(maxLength, `Entry length must not exceed ${maxLength} characters`)
     .required('Enter text'),
 })
@@ -21,15 +21,15 @@ const taskSchema = Yup.object().shape({
 const TaskForm = () => {
   const dispatch = useDispatch()
 
-  const handleSubmit = (values, formikHelpers) => {
-    dispatch(addTask(values.task))
+  const handleFormSubmit = (formikValues, formikHelpers) => {
+    dispatch(addTask(formikValues.task))
     formikHelpers.resetForm()
   }
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={taskSchema}
-      onSubmit={handleSubmit}
+      onSubmit={handleFormSubmit}
     >
       {({ handleSubmit, errors, touched }) => (
         <>

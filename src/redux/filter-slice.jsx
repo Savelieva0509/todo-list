@@ -2,13 +2,13 @@ import { createSlice } from '@reduxjs/toolkit'
 import { statusFilters } from './constants'
 
 const filtersInitialState = {
-  status: statusFilters.all,
+  'status': statusFilters.all,
 }
 
 const filtersSlice = createSlice({
-  name: 'filter',
-  initialState: filtersInitialState,
-  reducers: {
+  'name': 'filter',
+  'initialState': filtersInitialState,
+  'reducers': {
     setFilter(state, action) {
       state.status = action.payload
     },
