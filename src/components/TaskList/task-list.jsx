@@ -20,6 +20,7 @@ const TaskList = () => {
   const tasks = useSelector(getTasks)
   const filter = useSelector(getFilter)
   const visibleTasks = getVisibleTasks(tasks, filter)
+
   return (
     <ul className={css.list}>
       {visibleTasks.map((task) => (

@@ -1,28 +1,55 @@
 import { useDispatch } from 'react-redux'
+import { Formik, ErrorMessage, Field } from 'formik'
+import * as Yup from 'yup'
 import Button from 'components/Button/button'
 import { addTask } from '.././../redux/tasks-slice'
 import css from './task-form.module.css'
 
+const initialValues = {
+  task: '',
+}
+
+const maxLength = 10
+
+const taskSchema = Yup.object().shape({
+  task: Yup.string()
+    .max(maxLength, `Entry length must not exceed ${maxLength} characters`)
+    .required('Enter text'),
+})
+
 const TaskForm = () => {
   const dispatch = useDispatch()
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    const form = event.target
-    dispatch(addTask(form.elements.text.value))
-    form.reset()
+  const handleSubmit = (values, formikHelpers) => {
+    console.log(values)
+    dispatch(addTask(values.task))
+    formikHelpers.resetForm()
   }
-
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <input
-        className={css.field}
-        type="text"
-        name="text"
-        placeholder="Enter task text..."
-      />
-      <Button type="submit">Add task</Button>
-    </form>
+    <Formik
+      initialValues={initialValues}
+      validationSchema={taskSchema}
+      onSubmit={handleSubmit}
+    >
+      {({ handleSubmit, errors, touched }) => (
+        <>
+          {' '}
+          <form className={css.form} onSubmit={handleSubmit}>
+            <Field
+              className={`${css.field} ${
+                touched.task && errors.task ? css.error_field : ''
+              }`}
+              type="text"
+              name="task"
+              placeholder="Enter task text..."
+            />
+
+            <Button type="submit">Add task</Button>
+          </form>
+          <ErrorMessage name="task" component="div" className={css.error} />
+        </>
+      )}
+    </Formik>
   )
 }
 

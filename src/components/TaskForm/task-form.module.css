@@ -7,8 +7,17 @@
   flex-grow: 1;
   padding: 8px;
   font: inherit;
+  border: 1px solid #1976d2; 
 }
 
 .field:focus {
-  outline-color: #1976d2;
+  outline: none; 
+  border: 1px solid #1976d2; 
+}
+.error {
+  color: red;
+}
+
+.error_field {
+  border: 1px solid red; 
 }
