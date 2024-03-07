@@ -15,6 +15,7 @@ jobs:
         run: |
           npm install
           npm run lint:js
+          npx eslint --fix src
           npm run build
 
       - name: Deploy 🚀

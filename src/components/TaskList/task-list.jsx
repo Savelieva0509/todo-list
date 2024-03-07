@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useSelector } from 'react-redux'
 import Task from 'components/Task/task'
 import { getTasks, getFilter } from '.././../redux/selectors'
@@ -14,7 +15,6 @@ const getVisibleTasks = (tasks, statusFilter) => {
       return tasks
   }
 }
-
 
 const TaskList = () => {
   const tasks = useSelector(getTasks)

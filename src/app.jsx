@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import TaskForm from './components/TaskForm/task-form'
 import Layout from './components/Layout/layout'
 import AppBar from './components/AppBar/app-bar'

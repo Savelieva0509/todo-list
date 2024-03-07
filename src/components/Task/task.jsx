@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { MdClose } from 'react-icons/md'
 import { useDispatch } from 'react-redux'
 import { deleteTask, toggleCompleted } from '.././../redux/tasks-slice'

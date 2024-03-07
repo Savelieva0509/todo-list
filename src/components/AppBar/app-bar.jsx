@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Filter from 'components/Filter/filter'
 import TaskCounter from 'components/TaskCounter/task-counter'
 import css from './app-bar.module.css'
