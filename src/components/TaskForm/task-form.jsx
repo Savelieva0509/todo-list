@@ -10,7 +10,7 @@ const initialValues = {
   'task': '',
 }
 
-const maxLength = 10
+const maxLength = 20
 
 const taskSchema = Yup.object().shape({
   'task': Yup.string()
